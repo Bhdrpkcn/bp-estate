@@ -6,15 +6,13 @@ const Hero = () => {
   const [backgroundPosition, setBackgroundPosition] = useState("center");
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect mobile devices by checking screen width
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust for mobile screen size
+      setIsMobile(window.innerWidth <= 768);
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Set initial state on load
     handleResize();
 
     return () => {

@@ -13,6 +13,15 @@ module.exports = {
       gridTemplateColumns: {
         "70/30": "70% 20%",
       },
+      keyframes: {
+        pulse: {
+          "0%, 100%": { backgroundPosition: "50% 50%" },
+          "50%": { backgroundPosition: "55% 55%" },
+        },
+      },
+      animation: {
+        pulseBackground: "pulse 5s infinite ease-in-out",
+      },
     },
   },
   plugins: [],
